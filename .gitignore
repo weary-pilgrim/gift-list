@@ -41,3 +41,4 @@ test/*.js
 
 dist
 *.orig
+.gift-list-rc 

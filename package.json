@@ -9,12 +9,18 @@
   "packageManager": "yarn@4.0.2",
   "type": "module",
   "scripts": {
-    "build": "tsc",
+    "build": "yarn build:clean && tsc",
+    "build:clean": "rm -rf dist",
+    "start": "yarn build && node dist/src/generate.js",
     "test": "vitest"
   },
   "devDependencies": {
     "@tsconfig/node-lts": "^18.12.5",
     "typescript": "^5.3.2",
     "vitest": "^0.34.6"
+  },
+  "dependencies": {
+    "cosmiconfig": "^8.3.6",
+    "zod": "^3.22.4"
   }
 }
